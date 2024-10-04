@@ -1,5 +1,5 @@
 class Car:
-    def init(self, speed, color, name, is_police=False):
+    def __init__(self, speed, color, name, is_police=False):
         self.speed = speed
         self.color = color
         self.name = name
@@ -19,14 +19,22 @@ class TownCar(Car):
     def init(self, speed, color, name):
         super().init(speed, color, name, is_police=False)
 
+
 class SportCar(Car):
     def init(self, speed, color, name):
         super().init(speed, color, name, is_police=False)
+
 
 class WorkCar(Car):
     def init(self, speed, color, name):
         super().init(speed, color, name, is_police=False)
 
+
 class PoliceCar(Car):
     def init(self, speed, color, name):
         super().init(speed, color, name, is_police=True)
+
+        TownCar_ = TownCar(50, 'красный', 'городская')
+        SportCar_ = SportCar(150, 'красный', 'спортивная')
+        WorkCar_ = WorkCar(40, 'белый', 'рабочая')
+        PoliceCar = PoliceCar(90, 'черный', 'полицейскаяская')
